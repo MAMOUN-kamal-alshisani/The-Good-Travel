@@ -5,28 +5,37 @@ main{
 
 
 #second{
-margin-left:200px;
+margin-left:50px;
 
 }
 
-#table{
-    
-    font-weight: bold;
-    margin-left: 100px;
-    border-radius: 5px;
-border:solid 2px;
-width:600px;
-background-image: linear-gradient( #5d4b7696,#fffdfe88);
-margin-top: 50px;
-}
-table, tr, td{
-    border: 2px solid;
 
 
+ #table{
+   display: inline-table;
+ 
+   background-image: linear-gradient( #5d4b7696,#fffdfe88);
+  margin-top: 50px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 100px;
+   width: 500px;
+} 
 
-}
+ table, tr, td{
+ 
+  padding-left: 100px;
+  margin-left: 100px;
 
-tr{ border: 2px solid;}
+  
+
+ }
+
+table , tr{ border:solid 2px ;
+  padding-left: 100px;
+  margin-left: 100px; 
+  
+ } 
 
 
 #form{

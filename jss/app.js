@@ -64,7 +64,7 @@ td7.textContent=this.transport;
 
     
 SetItems();
-
+GetItems();
 }
 
 

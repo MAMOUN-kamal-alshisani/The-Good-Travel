@@ -19,10 +19,10 @@ localStorage.setItem('places',locations);
 }
 
 function GetItems(){
-let LocationString=LocalStorage.getItem('places');
-LocalObject=JSON.parse(LocationString);
+let LocationString=localStorage.getItem('places');
+let LocalObject=JSON.parse(LocationString);
 if (LocalObject!==null){
-    allplaces=LocalObject
+    allplaces=LocalObject;
 }
 }
 
@@ -64,7 +64,7 @@ td7.textContent=this.transport;
 
     
 SetItems();
-GetItems();
+
 }
 
 
@@ -77,16 +77,25 @@ event.preventDefault();
 let path;
 let img1=document.getElementById('img1');
 let placeN = event.target.placeN.value;
-if(placeN ==='HAWAII'){
-  placeN.textContent=img1;}
+
 console.log(placeN);
 let trip=event.target.trip.value;
+if(trip ==='HAWAII'){
+    let MYimgs=document.getElementById('img2');
+    thetable.appendChild(MYimgs);
+    MYimgs.setAttribute('src','images/HAWAII.jpg');
+}else if(trip ==='LONDON'){
+    let MYimgs=document.getElementById('img3');
+    thetable.appendChild(MYimgs);
+    MYimgs.setAttribute('src','images/ITALY.png');
+
+    }
 console.log(trip);
 let transport=event.target.transport.value;
 console.log(transport);
 let newplaces=new myplaces(placeN,trip,transport)
 newplaces.render();
-SetItems();
+
 }
 
 
